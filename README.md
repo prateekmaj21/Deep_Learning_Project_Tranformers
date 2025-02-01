@@ -90,3 +90,82 @@ The code will generate a concise summary of the provided text, constrained by th
 
 This project offers a straightforward example of how to use transformer models for effective text analysis. By employing pre-trained models, the process becomes accessible and efficient.   This serves as a good starting point for building more sophisticated natural language processing applications.
 
+
+## Fine-Tuning BART for Text Classification (Part 3):
+
+This repository provides a guide to fine-tuning the **BART (Bidirectional and Auto-Regressive Transformers)** model for text classification using the **Hugging Face Transformers** library.
+
+## 📌 Requirements
+
+Ensure the required libraries are installed:
+
+- `transformers`
+- `datasets`
+- `torch`
+
+## 📂 Dataset Preparation
+
+- The dataset should be in CSV format with at least two columns:
+  - **Text**: The textual data.
+  - **Label**: The corresponding class label.
+
+Example format:
+
+| Text | Label |
+|------|-------|
+| "Budget to set scene for election" | Politics |
+| "Army chiefs in regiments decision" | Politics |
+| "Howard denies split over ID cards" | Politics |
+| "Observers to monitor UK election" | Politics |
+| "Kilroy names election seat target" | Politics |
+
+- Load the dataset and map numerical labels to class names.
+
+## 🏗 Data Preprocessing
+
+- Split the dataset into training and validation sets.
+- Tokenize the texts using **BART tokenizer**.
+- Encode labels.
+- Create a PyTorch dataset class.
+
+## 🔧 Model Setup
+
+- Load the **BART model for sequence classification**.
+- Ensure the number of labels matches the dataset classes.
+
+## 🎯 Training
+
+- Define training arguments:
+  - Evaluation strategy: **epoch**
+  - Learning rate: **2e-5**
+  - Batch size: **2**
+  - Number of training epochs: **5**
+  - Weight decay: **0.01**
+- Train the model using **Hugging Face Trainer**.
+
+## 💾 Saving the Model
+
+- Save the fine-tuned model and tokenizer for later use.
+
+## 🔍 Inference
+
+- Load the fine-tuned model.
+- Use a **zero-shot classification pipeline** for predictions.
+- Test predictions with sample text.
+
+## 📊 Evaluation
+
+- Evaluate the model on a validation dataset.
+- Compute accuracy based on predictions.
+
+## 🏆 Results
+
+- **Training Loss:** 0.79
+- **Evaluation Loss:** 0.07
+- **Accuracy on Sample Validation Set:** 40%
+
+---
+
+This guide helps in fine-tuning **BART for text classification** using **PyTorch** and **Hugging Face's Transformers library**. 🚀
+
+
