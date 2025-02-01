@@ -169,3 +169,20 @@ Example format:
 This guide helps in fine-tuning **BART for text classification** using **PyTorch** and **Hugging Face's Transformers library**. 🚀
 
 
+## 🔍 Inference  
+- Load the **fine-tuned model**.  
+- Perform **zero-shot classification**.  
+
+### Example input:
+```
+The Samsung Galaxy S25 Ultra will be the flagship handset for the company's Galaxy AI software.
+```
+ output:
+```
+Technology: 0.23
+Entertainment: 0.21
+Business: 0.20
+Sport: 0.18
+Politics: 0.18
+```
+
