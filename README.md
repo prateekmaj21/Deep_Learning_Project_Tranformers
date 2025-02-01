@@ -177,7 +177,7 @@ This guide helps in fine-tuning **BART for text classification** using **PyTorch
 ```
 The Samsung Galaxy S25 Ultra will be the flagship handset for the company's Galaxy AI software.
 ```
- output:
+### Output:
 ```
 Technology: 0.23
 Entertainment: 0.21
